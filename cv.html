@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CV - Hafiz Abdulmanan</title>
+    <link rel="icon" type="image/svg+xml" href="assets/markhor-icon.svg">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="blogs.html">Blogs</a></li>
+            <li><a href="cv.html" class="active">CV</a></li>
+        </ul>
+    </nav>
+
+    <main class="cv-container">
+        <div class="cv-content">
+            <div class="cv-preview">
+                <div class="cv-download-section">
+                    <div class="download-card">
+                        <div class="cv-icon">📄</div>
+                        <h3>Download My CV</h3>
+                        <p>Get the complete details of my professional journey, skills, and achievements.</p>
+                        <div class="download-options">
+                            <a href="assets/HAFIZ-ABDULMANAN-CV.pdf" download="HAFIZ-ABDULMANAN-CV.pdf" class="download-btn primary">
+                                <span class="download-icon">⬇️</span>
+                                Download PDF
+                            </a>
+                        </div>
+                        <p class="file-info">Last updated: September 2025 | Size: ~86KB</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 hamsof. All rights reserved.</p>
+    </footer>
+
+    <script>
+        // Track download analytics (optional)
+        document.addEventListener('DOMContentLoaded', function() {
+            const downloadButtons = document.querySelectorAll('.download-btn');
+            downloadButtons.forEach(button => {
+                button.addEventListener('click', function() {
+                    const fileType = this.textContent.includes('PDF') ? 'PDF' : 'Word';
+                    console.log(`CV downloaded: ${fileType} format`);
+                    
+                    // Optional: Add analytics tracking here
+                    // gtag('event', 'download', {
+                    //     'event_category': 'CV',
+                    //     'event_label': fileType
+                    // });
+                });
+            });
+        });
+    </script>
+</body>
+</html>
